@@ -1,16 +1,32 @@
-# React + Vite
+# StudyMate — Find Your Perfect Study Partner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Site: https://your-live-url.netlify.app
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔐 Firebase Authentication with Google and Email/Password login
+- 🔍 Search and filter study partners by subject and experience level
+- 🤝 Send partner requests with duplicate prevention
+- 🌙 Dark/Light theme toggle for comfortable studying
+- 📱 Fully responsive design for mobile, tablet, and desktop
+- ⚡ Real-time CRUD operations with MongoDB Atlas
+- 🎯 Private routes to protect user-specific pages
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React, Vite, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas
+- **Authentication:** Firebase
 
-## Expanding the ESLint configuration
+## Run Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Client
+cd studymate-client
+npm install
+npm run dev
+
+### Server
+cd studymate-server
+npm install
+npm run dev

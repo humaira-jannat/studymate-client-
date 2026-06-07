@@ -1,3 +1,4 @@
+// Footer with social links and copyright
 import { Link } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";

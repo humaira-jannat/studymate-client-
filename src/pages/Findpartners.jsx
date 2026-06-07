@@ -1,3 +1,4 @@
+// Find partners page with search by subject and sort by experience
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import PartnerCard from "../components/PartnerCard";

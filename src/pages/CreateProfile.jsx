@@ -1,3 +1,4 @@
+// Create profile page for logged in users only
 import { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import axios from "axios";

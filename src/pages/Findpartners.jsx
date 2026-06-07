@@ -7,7 +7,7 @@ import { AuthContext } from "../Context/AuthContext";
 import { FiSearch } from "react-icons/fi";
 
 const FindPartners = () => {
-  const { theme } = useContext(AuthContext);
+  const { theme, user } = useContext(AuthContext);
   const [partners, setPartners] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -22,9 +22,12 @@ const FindPartners = () => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/partners`, { params })
       .then((res) => {
-        // Fix: ensure it's always an array
         const data = Array.isArray(res.data) ? res.data : [];
-        setPartners(data);
+        // Filter out current user's own profile
+        const filtered = data.filter(
+          (partner) => partner.email !== user?.email
+        );
+        setPartners(filtered);
         setLoading(false);
       })
       .catch(() => {
@@ -81,7 +84,10 @@ const FindPartners = () => {
           </select>
 
           {/* Search */}
-          <form onSubmit={handleSearch} className="flex gap-2 w-full sm:w-auto">
+          <form
+            onSubmit={handleSearch}
+            className="flex gap-2 w-full sm:w-auto"
+          >
             <input
               type="text"
               value={search}

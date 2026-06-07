@@ -25,7 +25,7 @@ const slides = [
 ];
 
 const Home = () => {
-  const { theme } = useContext(AuthContext);
+ const { theme, user } = useContext(AuthContext);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [topPartners, setTopPartners] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -37,20 +37,23 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/partners?sort=rating`)
-      .then((res) => {
-        // Fix: ensure it's always an array
-        const data = Array.isArray(res.data) ? res.data : [];
-        setTopPartners(data.slice(0, 6));
-        setLoading(false);
-      })
-      .catch(() => {
-        setTopPartners([]);
-        setLoading(false);
-      });
-  }, []);
+useEffect(() => {
+  axios
+    .get(`${import.meta.env.VITE_API_URL}/partners?sort=rating`)
+    .then((res) => {
+      const data = Array.isArray(res.data) ? res.data : [];
+      // Filter out current user's own profile
+      const filtered = data.filter(
+        (partner) => partner.email !== user?.email
+      );
+      setTopPartners(filtered.slice(0, 6));
+      setLoading(false);
+    })
+    .catch(() => {
+      setTopPartners([]);
+      setLoading(false);
+    });
+}, [user]);
 
   return (
     <div>

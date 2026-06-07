@@ -1,3 +1,4 @@
+// Register page with password validation rules
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";

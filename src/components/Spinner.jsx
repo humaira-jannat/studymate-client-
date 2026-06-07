@@ -1,3 +1,4 @@
+// Custom loading spinner component
 const Spinner = () => {
   return (
     <div className="flex justify-center items-center min-h-[60vh]">

@@ -1,6 +1,6 @@
 # StudyMate — Find Your Perfect Study Partner
 
-Live Site: https://your-live-url.netlify.app
+Live Site:  https://studymate-humaira.netlify.app
 
 ## Features
 

@@ -4,13 +4,13 @@ Live Site:  https://studymate-humaira.netlify.app
 
 ## Features
 
-- 🔐 Firebase Authentication with Google and Email/Password login
-- 🔍 Search and filter study partners by subject and experience level
-- 🤝 Send partner requests with duplicate prevention
-- 🌙 Dark/Light theme toggle for comfortable studying
-- 📱 Fully responsive design for mobile, tablet, and desktop
-- ⚡ Real-time CRUD operations with MongoDB Atlas
-- 🎯 Private routes to protect user-specific pages
+-  Firebase Authentication with Google and Email/Password login
+-  Search and filter study partners by subject and experience level
+-  Send partner requests with duplicate prevention
+-  Dark/Light theme toggle for comfortable studying
+-  Fully responsive design for mobile, tablet, and desktop
+-  Real-time CRUD operations with MongoDB Atlas
+-  Private routes to protect user-specific pages
 
 ## Tech Stack
 

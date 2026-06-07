@@ -1,3 +1,4 @@
+// Creative 404 page with navigation back to home
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";

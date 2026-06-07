@@ -1,3 +1,4 @@
+// Private route - protects pages from unauthenticated access
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";

@@ -1,3 +1,4 @@
+// Navbar with dark light theme toggle and auth state
 import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";

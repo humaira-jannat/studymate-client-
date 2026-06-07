@@ -1,3 +1,4 @@
+// Login page with email, password and google authentication
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
